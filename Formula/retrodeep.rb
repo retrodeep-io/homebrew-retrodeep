@@ -12,7 +12,7 @@ class Retrodeep < Formula
 
   def install
       virtualenv_create(libexec, "python3")
-      system libexec/"bin/pip", "install", "-r", "requirements.txt"
+      system libexec/"bin/pip3", "install", "-r", "requirements.txt", "--user"
 
       bin.install_symlink libexec/"bin/retrodeep" => "retrodeep"
   end
