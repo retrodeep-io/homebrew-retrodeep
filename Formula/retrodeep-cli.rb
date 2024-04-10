@@ -11,8 +11,17 @@ class RetrodeepCli < Formula
   depends_on "python@3"
 
   def install
-      virtualenv_create(libexec, "python3")
-      system libexec/"bin/pip", "install", "-r", "requirements.txt"
+    virtualenv_create(libexec, "python3")
+    # Manually install each Python package listed in your requirements
+    packages = %w[
+      flask requests PyGithub PyInquirer GitPython argparse tqdm datetime 
+      pathlib clint sqlalchemy pymysql questionary gunicorn requests_oauthlib 
+      waitress cryptography uuid yaspin randomname tabulate alive-progress 
+      websockets python-socketio[client] python-engineio[asyncio] aiohttp watchdog
+    ]
+    packages.each do |pkg|
+      system libexec/"bin/pip", "install", pkg
+    end
 
       bin.install_symlink libexec/"bin/retrodeep" => "retrodeep"
   end
