@@ -8,7 +8,7 @@ class RetrodeepCli < Formula
   license "MIT"
   version "1.0.0-beta.1"
 
-  depends_on "python@3.9"
+  depends_on "python@3"
 
   def install
       virtualenv_create(libexec, "python3")
