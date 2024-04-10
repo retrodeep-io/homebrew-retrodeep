@@ -1,4 +1,4 @@
-class Retrodeep < Formula
+class RetrodeepCli < Formula
   include Language::Python::Virtualenv
 
   desc "RetroDeep CLI is a powerful, user-friendly command-line interface designed to supercharge your development workflow by enabling you to deploy, manage, and scale your applications directly from the terminal." 
