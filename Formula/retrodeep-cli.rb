@@ -15,9 +15,8 @@ class RetrodeepCli < Formula
     # Manually install each Python package listed in your requirements
     packages = %w[
       flask requests PyGithub PyInquirer GitPython argparse tqdm datetime 
-      clint sqlalchemy pymysql questionary gunicorn requests_oauthlib 
-      waitress cryptography uuid yaspin randomname tabulate alive-progress 
-      websockets aiohttp watchdog
+      clint questionary requests_oauthlib uuid yaspin 
+      randomname tabulate alive-progress
     ]
 
     packages.each do |pkg|
