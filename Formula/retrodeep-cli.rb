@@ -177,11 +177,12 @@ class RetrodeepCli < Formula
   end
 
   def install
-    # virtualenv_create(libexec, "python3.9")
+    
     ENV.append "LDFLAGS", "-L#{Formula["openssl@1.1"].opt_lib}"
     ENV.append "CPPFLAGS", "-I#{Formula["openssl@1.1"].opt_include}"
     ENV.append "PKG_CONFIG_PATH", "#{Formula["openssl@1.1"].opt_lib}/pkgconfig"
 
+    virtualenv_create(libexec, "python3.9")
     virtualenv_install_with_resources
   end
 
