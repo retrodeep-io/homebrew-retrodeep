@@ -23,7 +23,9 @@ class RetrodeepCli < Formula
       venv.pip_install pkg
     end
 
-      bin.install_symlink libexec/"bin/retrodeep" => "retrodeep"
+    # libexec.install "path/to/retrodeep.py"
+    # bin.install_symlink libexec/"retrodeep.py" => "retrodeep"
+    bin.install_symlink libexec/"bin/retrodeep"
   end
 
   test do
