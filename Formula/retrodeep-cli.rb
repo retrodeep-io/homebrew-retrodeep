@@ -9,6 +9,7 @@ class RetrodeepCli < Formula
   version "1.0.0-beta.1"
 
   depends_on "python@3.9"
+  depends_on "openssl@1.1"
 
   resource "requests" do
     url "https://files.pythonhosted.org/packages/9d/be/10918a2eac4ae9f02f6cfe6414b7a155ccd8f7f9d4380d62fd5b955065c3/requests-2.31.0.tar.gz"
@@ -177,6 +178,10 @@ class RetrodeepCli < Formula
 
   def install
     # virtualenv_create(libexec, "python3.9")
+    ENV.append "LDFLAGS", "-L#{Formula["openssl@1.1"].opt_lib}"
+    ENV.append "CPPFLAGS", "-I#{Formula["openssl@1.1"].opt_include}"
+    ENV.append "PKG_CONFIG_PATH", "#{Formula["openssl@1.1"].opt_lib}/pkgconfig"
+
     virtualenv_install_with_resources
   end
 
