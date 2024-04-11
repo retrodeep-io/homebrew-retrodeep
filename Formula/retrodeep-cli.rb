@@ -10,8 +10,6 @@ class RetrodeepCli < Formula
 
   depends_on "python@3"
 
-  venv = virtualenv_create(libexec, "python3")
-
   resource "flask" do
     url "https://files.pythonhosted.org/packages/41/e1/d104c83026f8d35dfd2c261df7d64738341067526406b40190bc063e829a/flask-3.0.3.tar.gz"
     sha256 "ceb27b0af3823ea2737928a4d99d125a06175b8512c445cbd9a9ce200ef76842"
