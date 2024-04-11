@@ -8,7 +8,7 @@ class RetrodeepCli < Formula
   license "MIT"
   version "1.0.0-beta.2"
 
-  depends_on "python@3"
+  depends_on "python@3.8"
 
   resource "flask" do
     url "https://files.pythonhosted.org/packages/41/e1/d104c83026f8d35dfd2c261df7d64738341067526406b40190bc063e829a/flask-3.0.3.tar.gz"
