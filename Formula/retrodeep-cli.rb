@@ -3,16 +3,21 @@ class RetrodeepCli < Formula
 
   desc "RetroDeep CLI is a powerful, user-friendly command-line interface designed to supercharge your development workflow by enabling you to deploy, manage, and scale your applications directly from the terminal." 
   homepage "https://github.com/retrodeep-io/retrodeep-cli"
-  url "https://github.com/retrodeep-io/retrodeep-cli/archive/refs/tags/v1.0.0-beta.3.tar.gz"
-  sha256 "55510ddc7d1536fd9262ba060baca1aaf9ac65b916744598cf0e456fe2223c9a"
+  url "https://github.com/retrodeep-io/retrodeep-cli/archive/refs/tags/v1.0.0-beta.1.tar.gz"
+  sha256 "e35595afb6778dcb6753af10ae72a23f1c2eda1df68ed2d3a9eebde0b8f54d2e"
   license "MIT"
-  version "1.0.0-beta.3"
+  version "1.0.0-beta.1"
 
   depends_on "python@3.9"
 
   resource "requests" do
     url "https://files.pythonhosted.org/packages/9d/be/10918a2eac4ae9f02f6cfe6414b7a155ccd8f7f9d4380d62fd5b955065c3/requests-2.31.0.tar.gz"
     sha256 "942c5a758f98d790eaed1a29cb6eefc7ffb0d1cf7af05c3d2791656dbd6ad1e1"
+  end
+
+  resource "urllib3" do
+    url "https://files.pythonhosted.org/packages/7a/50/7fd50a27caa0652cd4caf224aa87741ea41d3265ad13f010886167cfcc79/urllib3-2.2.1.tar.gz"
+    sha256 "d0570876c61ab9e520d776c38acbbb5b05a776d3f9ff98a5c8fd5162a444cf19"
   end
 
   resource "PyGithub" do
