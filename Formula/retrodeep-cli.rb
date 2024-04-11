@@ -3,17 +3,12 @@ class RetrodeepCli < Formula
 
   desc "RetroDeep CLI is a powerful, user-friendly command-line interface designed to supercharge your development workflow by enabling you to deploy, manage, and scale your applications directly from the terminal." 
   homepage "https://github.com/retrodeep-io/retrodeep-cli"
-  url "https://github.com/retrodeep-io/retrodeep-cli/archive/refs/tags/v1.0.0-beta.2.tar.gz"
-  sha256 "7c2a3bc9265f8e7c2ab72b7480e540cc208d471dc53e1dc2f8f057600c8b99c2"
+  url "https://github.com/retrodeep-io/retrodeep-cli/archive/refs/tags/v1.0.0-beta.3.tar.gz"
+  sha256 "55510ddc7d1536fd9262ba060baca1aaf9ac65b916744598cf0e456fe2223c9a"
   license "MIT"
-  version "1.0.0-beta.2"
+  version "1.0.0-beta.3"
 
   depends_on "python@3.9"
-
-  resource "flask" do
-    url "https://files.pythonhosted.org/packages/41/e1/d104c83026f8d35dfd2c261df7d64738341067526406b40190bc063e829a/flask-3.0.3.tar.gz"
-    sha256 "ceb27b0af3823ea2737928a4d99d125a06175b8512c445cbd9a9ce200ef76842"
-  end
 
   resource "requests" do
     url "https://files.pythonhosted.org/packages/9d/be/10918a2eac4ae9f02f6cfe6414b7a155ccd8f7f9d4380d62fd5b955065c3/requests-2.31.0.tar.gz"
@@ -58,6 +53,11 @@ class RetrodeepCli < Formula
   resource "alive-progress" do
     url "https://files.pythonhosted.org/packages/6a/cf/de25c4f6123c3b3eb5acc87144d3e017df25b32c16806b14572a259939ac/alive-progress-3.1.5.tar.gz"
     sha256 "42e399a66c8150dc507602dff7b7953f105ef11faf97ddaa6d27b1cbf45c4c98"
+  end
+
+  resource "setuptools" do
+    url "https://files.pythonhosted.org/packages/4d/5b/dc575711b6b8f2f866131a40d053e30e962e633b332acf7cd2c24843d83d/setuptools-69.2.0.tar.gz"
+    sha256 "0ff4183f8f42cd8fa3acea16c45205521a4ef28f73c6391d8a25e92893134f2e"
   end
 
   def install
