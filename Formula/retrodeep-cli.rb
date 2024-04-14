@@ -4,7 +4,7 @@ class RetrodeepCli < Formula
   desc "RetroDeep CLI is a powerful, user-friendly command-line interface designed to supercharge your development workflow by enabling you to deploy, manage, and scale your applications directly from the terminal." 
   homepage "https://github.com/retrodeep-io/retrodeep-cli"
   url "https://github.com/retrodeep-io/retrodeep-cli/archive/refs/tags/v1.0.0-beta.1.tar.gz"
-  sha256 "f5fcf85c9eecc071574512a9b2feba84de33f12aad1d200759b8dc5857423402"
+  sha256 "b30f490cb7a86e7bdc0619c36ec4a303947cc8cc3a41e609f657e1af95eb6e32"
   license "MIT"
   version "1.0.0-beta.1"
 
